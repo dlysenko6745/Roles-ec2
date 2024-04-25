@@ -24,11 +24,11 @@ jobs:
         depth: 1
         branch: 'main'
         owner: 'dlysenko6745'
-        repository: 'ec2'
+        repository: 'Roles-ec2'
 
     - name: Access cloned repo
       run: |
-         cd ec2
+         cd Roles-ec2
          ls -la
     
     - name: Configure AWS credentials
@@ -45,4 +45,5 @@ jobs:
            
     - name: Run Ansible Playbook
       run: |
-        ansible-playbook ec2.yml
+        ansible-playbook ec2-role/main.yml
+        ansible-playbook ec2-role/vars.yml
