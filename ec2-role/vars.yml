@@ -1,0 +1,19 @@
+---
+- name: Create EC2 instance 
+  ec2_instance:
+    instance_type: "t2.micro"
+    image: "ami-0900fe555666598a2"
+    key_name: "Diana"
+    region: "us-east-2"
+    group_id: "sg-028542e4a43b87201"
+    subnet_id: "01a4dc0297e6ba993"
+  register: ec2
+  environment: production
+  server_port: 8080
+  web_server:
+  port: 80
+  document_root: /var/www/html
+  database:
+  host: localhost
+  username: admin
+  password: admin123
