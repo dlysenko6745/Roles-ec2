@@ -47,3 +47,4 @@ jobs:
       run: |
         ansible-playbook ec2-role/main.yml
         ansible-playbook ec2-role/vars.yml
+        
